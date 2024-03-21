@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligner les éléments au début */
+    gap: 10px; /* Espace entre les photos */
+}
+
+.flex-container img {
+    flex: 1 1 48%; /* Permet aux images de prendre environ la moitié de l'espace, avec ajustement */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Spécifique pour la dernière image pour qu'elle prenne toute la largeur si elle est seule */
+.flex-container img:last-of-type {
+    flex-basis: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.photo-text-pair {
+    display: flex;
+    flex-direction: row; /* Ou 'column' si vous voulez une disposition verticale */
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.photo {
+    width: 50%;
+    max-width: 200px; /* Ajustez à la taille désirée */
+    height: auto;
+}
+
+.text {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media queries pour la réactivité */
+@media (max-width: 768px) {
+    .photo-text-pair {
+        flex-direction: column;
+    }
+
+    .photo {
+        width: 100%;
+    }
+}
